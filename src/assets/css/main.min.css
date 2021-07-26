@@ -1,1 +1,89 @@
-*{-webkit-box-sizing:border-box;box-sizing:border-box}.App{color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:#14213d;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100vh}.App .container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:1200px;height:calc(100vh - 100px);width:100%}.App .container #Editor>div{height:calc(100% - 100px)}.App .container #Editor #editor{padding:15px;width:100%;height:100%;overflow-y:scroll}.App .container #Preview #preview-area{padding:0 15px;color:#000;background-color:#fff;overflow-y:scroll}.App .container #Preview #preview-area img{width:100px}.App .container #Editor,.App .container #Preview{width:50%;color:#fff;padding:0 10px}.App .container #preview-area{height:calc(100% - 100px)}.App .container #preview-area pre{padding:10px}.App .container #preview-area code{vertical-align:middle;padding:2px 6px}.App .container #preview-area pre,.App .container #preview-area code{color:white;background:#14213d;border-radius:5px}.App .container #preview-area pre code{padding:0}@media screen and (max-width: 750px){.App{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.App .container{display:block;width:100vw}.App .container #Editor,.App .container #Preview{height:calc(50% - 100px);width:100%}}
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.App {
+	color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: #14213d;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100vh;
+}
+.App .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	max-width: 1200px;
+	height: calc(100vh - 100px);
+	width: 100%;
+}
+.App .container #Editor > div {
+	height: calc(100% - 100px);
+}
+.App .container #Editor #editor {
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+.App .container #Preview #preview-area {
+	padding: 0 15px;
+	color: #000;
+	background-color: #fff;
+	overflow-y: scroll;
+}
+.App .container #Preview #preview-area img {
+	width: 100px;
+}
+.App .container #Editor,
+.App .container #Preview {
+	width: 50%;
+	color: #fff;
+	padding: 0 10px;
+}
+.App .container #preview-area {
+	height: calc(100% - 100px);
+}
+.App .container #preview-area pre {
+	padding: 10px;
+}
+.App .container #preview-area code {
+	vertical-align: middle;
+	padding: 2px 6px;
+}
+.App .container #preview-area pre,
+.App .container #preview-area code {
+	color: white;
+	background: #14213d;
+	border-radius: 5px;
+}
+.App .container #preview-area pre code {
+	padding: 0;
+}
+@media screen and (max-width: 750px) {
+	.App {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.App .container {
+		display: block;
+		width: 100vw;
+	}
+	.App .container #Editor,
+	.App .container #Preview {
+		height: calc(50% - 100px);
+		width: 100%;
+	}
+}
