@@ -3,18 +3,22 @@
 	background-color: #14213d;
 	height: 100vh;
 
-	#Editor {
+	#Editor,
+	#Preview {
 		width: 50vw;
 		height: 100%;
 		color: #fff;
-		padding: 0 20pxk;
-		#editor-area {
-			width: 100%;
-			height: calc(100vh - 100px);
-		}
+		padding: 0 10px;
 	}
 
 	#Preview {
-		color: #fff;
+		#preview-area {
+			background-color: #fff;
+		}
+	}
+	#editor-area,
+	#preview-area {
+		width: 100%;
+		height: calc(100% - 100px);
 	}
 }
