@@ -1,0 +1,1 @@
+.App{display:-webkit-box;display:-ms-flexbox;display:flex;background-color:#14213d;height:100vh}.App #Editor{width:50vw;height:100%;color:#fff;padding:0 20pxk}.App #Editor #editor-area{width:100%;height:calc(100vh - 100px)}.App #Preview{color:#fff}
