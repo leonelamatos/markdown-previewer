@@ -1,24 +1,81 @@
+* {
+	box-sizing: border-box;
+}
+
 .App {
+	color: #fff;
 	display: flex;
 	background-color: #14213d;
+	// height: 100vh;
+	// justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// height: calc(100vh - 100px);
 	height: 100vh;
 
-	#Editor,
-	#Preview {
-		width: 50vw;
-		height: 100%;
-		color: #fff;
-		padding: 0 10px;
-	}
+	.container {
+		display: flex;
+		justify-content: center;
+		max-width: 1200px;
+		height: calc(100vh - 100px);
+		width: 100%;
+		// background: blue;
 
-	#Preview {
+		#Editor {
+			> div {
+				height: calc(100% - 100px);
+			}
+			& #editor {
+				padding: 15px;
+				// font-size: 1.5rem;
+				// height: 100%;
+				width: 100%;
+				height: calc(100% - 100px);
+				overflow-x: scroll;
+			}
+		}
+
+		#Preview {
+			#preview-area {
+				padding: 0 15px;
+				color: #000;
+				background-color: #fff;
+				overflow-x: scroll;
+
+				img {
+					width: 100px;
+				}
+			}
+		}
+
+		#Editor,
+		#Preview {
+			width: 50%;
+			// height: 100%;
+			color: #fff;
+			padding: 0 10px;
+		}
+
+		// #editor,
 		#preview-area {
-			background-color: #fff;
+			// max-width: 50%;
+			height: calc(100% - 100px);
 		}
 	}
-	#editor-area,
-	#preview-area {
-		width: 100%;
-		height: calc(100% - 100px);
+}
+
+@media screen and (max-width: 750px) {
+	.App {
+		justify-content: center;
+		.container {
+			display: block;
+
+			width: 100vw;
+			#Editor,
+			#Preview {
+				height: calc(50% - 100px);
+				width: 100%;
+			}
+		}
 	}
 }
