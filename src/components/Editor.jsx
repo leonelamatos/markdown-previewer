@@ -43,7 +43,7 @@ const Editor = () => {
 	return (
 		<div className='container'>
 			<div id='Editor'>
-				<h2>Editor Window</h2>
+				<h2>Editor</h2>
 				<div>
 					<textarea
 						name='editorText'

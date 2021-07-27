@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.App {
+    font-family: 'Lexend', sans-serif;
+	color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background-image: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100vh;
+}
+.App .container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	max-width: 1200px;
+	height: calc(100vh - 100px);
+	width: 100%;
+}
+
+.App h1 {
+    color: #392A16;
+}
+.App .container #Editor > div {
+	height: calc(100% - 100px);
+}
+.App .container #Editor #editor {
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+.App .container #Preview #preview {
+	padding: 0 15px;
+	color: #000;
+	background-color: #fff;
+	overflow-y: scroll;
+}
+.App .container #Preview #preview img {
+	width: 100px;
+}
+.App .container #Editor h2,
+.App .container #Preview h2{
+font-weight: normal;
+color: #423e3b;
+}
+.App .container #Editor,
+.App .container #Preview {
+	width: 50%;
+	color: #fff;
+	padding: 0 10px;
+}
+.App .container #preview {
+	height: calc(100% - 100px);
+}
+.App .container #preview pre {
+	padding: 10px;
+}
+.App .container #preview code {
+	vertical-align: middle;
+	padding: 2px 6px;
+}
+.App .container #preview pre,
+.App .container #preview code {
+	color: white;
+	background: #14213d;
+	border-radius: 5px;
+}
+.App .container #preview pre code {
+	padding: 0;
+}
+@media screen and (max-width: 750px) {
+	.App {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.App .container {
+		display: block;
+		width: 100vw;
+	}
+	.App .container #Editor,
+	.App .container #Preview {
+		height: calc(50% - 100px);
+		width: 100%;
+	}
+}

@@ -1,7 +1,7 @@
 import Editor from './components/Editor';
 // import Preview from './components/Preview';
 
-import './assets/css/main.min.css';
+import './assets/css/main.css';
 
 function App() {
 	return (

@@ -4,7 +4,7 @@ import DOMPurify from 'dompurify';
 const Preview = ({ text }) => {
 	return (
 		<div id='Preview'>
-			<h2>Preview Window</h2>
+			<h2>Preview</h2>
 			<div
 				id='preview'
 				dangerouslySetInnerHTML={{
