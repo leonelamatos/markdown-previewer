@@ -3,24 +3,41 @@ import Preview from './Preview';
 import marked from 'marked';
 import DOMPurify from 'dompurify';
 
+const defaultValue = `
+# Heading 
+## Heading Two
+[this is a link](https://github.com)
+
+Inline \`code\`
+
+\`\`\`
+Sample text here...
+\`\`\`
+
+> This is a block.
+
++ This Create a list by starting 
+
+![Minion](https://octodex.github.com/images/minion.png)
+
+**This is bold text**
+
+`;
 const Editor = () => {
-	const [text, setText] = useState('This is some text');
+	const [text, setText] = useState(defaultValue);
 
 	useEffect(() => {
 		const textArea = document.querySelector('#editor');
-		const output = document.querySelector('#preview-area');
 		textArea.addEventListener('scroll', function () {
 			console.log(this.scrollTop);
 
-			document.querySelector('#preview-area').scrollTop =
-				this.scrollTop * 1.3;
+			document.querySelector('#preview').scrollTop = this.scrollTop * 1.3;
 		});
 	}, []);
 
 	function onChangeHandler(e) {
 		const { value } = e.target;
-		const markedDown = DOMPurify.sanitize(marked(value));
-		setText(markedDown);
+		setText(value);
 	}
 
 	return (
@@ -31,7 +48,8 @@ const Editor = () => {
 					<textarea
 						name='editorText'
 						id='editor'
-						onChange={onChangeHandler}></textarea>
+						onChange={onChangeHandler}
+						value={text}></textarea>
 				</div>
 			</div>
 
